@@ -6,9 +6,40 @@
     <title>pioneer bank</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="js file.js"></script>
 </head>
 <body>
-    <h1 class="text-center text-capitalize text-danger">welcome to pioneer bank</h1>
+    
+    <!----login area----->
+    
+        <div id="login-area">
+            <h1 class="text-center text-capitalize m-5">welcome to pioneer bank</h1>
+            <div class="submit-area p-4 w-75">
+                <form>
+                    <div class="form-group">
+                    <label class="font-weight-bold text-capitalize m-2 font" for="exampleInputEmail1">login</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address">
+                    
+                    </div>
+                    <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    
+                    <button id="logbtn" type="submit" class="btn btn-success">Enter</button>
+                </form>
+            </div>
+        </div>
+    
+
+    <script>
+        const loginbtn = document.getElementById("logbtn");
+        loginbtn.addEventListener("click", function(){
+            const loginArea = document.getElementById("login-area");
+            loginArea.style.display = "none";
+        })
+    </script>
+
+
     
 
 

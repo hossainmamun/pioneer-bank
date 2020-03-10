@@ -7,7 +7,7 @@
 /*-------------------*/
 
 #login-area{
-    margin-top: 100px;
+    padding-top: 50px;
 }
 
 .submit-area{
@@ -15,4 +15,8 @@
     box-shadow: 5px 5px 10px grey;
     border-radius: 10px;
     font-size: 20px;
+}
+
+#transaction-area{
+    display: none;
 }

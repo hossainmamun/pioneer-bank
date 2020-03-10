@@ -10,6 +10,7 @@
 <body>
     
     <!----login area----->
+    <div class="container w-75">
     
         <div id="login-area">
             <h1 class="text-center text-capitalize m-5">welcome to pioneer bank</h1>
@@ -29,9 +30,46 @@
 
         <!---transaction area----->
         <div id="transaction-area">
-            <h1 class="text-capitalize text-center p-4">transaction area</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="deposit status">
+                        <h5>deposit</h5>
+                        <h1>$00</h1>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="withdraw status">
+                        <h5>withdraw</h5>
+                        <h1>$00</h1>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="balance status">
+                        <h5>balance</h5>
+                        <h1>$1240</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="submit-area p-4">
+                        <h5>deposit</h5>
+                        <input type="text" class="form-control" placeholder="$ amount you want to deposit"><br>
+                        <button type="submit" class="btn btn-success">deposit</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="submit-area p-4">
+                        <h5>withdraw</h5>
+                        <input type="text" class="form-control" placeholder="$ amount you want to withdraw"><br>
+                        <button type="submit" class="btn btn-success">withdraw</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    
+    </div>
         
     <script>
         const loginBtn = document.getElementById("login");

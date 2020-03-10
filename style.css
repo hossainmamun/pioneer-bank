@@ -20,3 +20,47 @@
 #transaction-area{
     display: none;
 }
+
+
+.deposit{
+    background-color: #5E4AC6;
+}
+.withdraw{
+    background-color: #F49370;
+}
+.balance{
+    background-color: #F39917;
+}
+.status{
+    margin: 0px 20px;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+.row{
+    margin-top: 100px;
+}
+.{
+    
+}
+.{
+    
+}
+.{
+    
+}
+.{
+    
+}
+.{
+    
+}
+.{
+    
+}
+.{
+    
+}
+.{
+    
+}

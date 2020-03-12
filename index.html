@@ -24,7 +24,7 @@
                 <input type="password" class="form-control" placeholder="Password">
                 </div>
                 
-                <button id="login" type="submit" class="btn btn-success">Enter</button>
+                <button id="login" type="submit" class="btn btn-success text-capitalize">login</button>
             </div>
         </div>
 
@@ -40,7 +40,7 @@
                 <div class="col-md-4">
                     <div class="withdraw status">
                         <h5>withdraw</h5>
-                        <h1>$00</h1>
+                        <h1>$<span id="current-withdraw">00</span></h1>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -64,8 +64,8 @@
                 <div class="col-md-6">
                     <div class="submit-area p-4">
                         <h5>withdraw</h5>
-                        <input type="text" class="form-control" placeholder="$ amount you want to withdraw"><br>
-                        <button type="submit" class="btn btn-success">withdraw</button>
+                        <input id="withdraw-input" type="text" class="form-control" placeholder="$ amount you want to withdraw"><br>
+                        <button id="withdraw-btn" type="submit" class="btn btn-success">withdraw</button>
                     </div>
                 </div>
             </div>
@@ -76,6 +76,8 @@
     <script>
 
         // login button event handler.....
+
+        
         const loginBtn = document.getElementById("login");
         loginBtn.addEventListener("click", function(){
             const loginArea = document.getElementById("login-area");
@@ -109,6 +111,33 @@
            document.getElementById("input-amount").value = " ";
         })
         
+    </script>
+
+    <script>
+        // withdraw event listener .....
+        const withdrawBtn = document.getElementById("withdraw-btn");
+        withdrawBtn.addEventListener("click", function(){
+
+            const withdrawBalance = document.getElementById("withdraw-input").value;
+            const withdrawBalanceNumber = parseFloat(withdrawBalance);
+
+            const currentWithdraw = document.getElementById("current-withdraw").innerText;
+            const currentWithdrawNumber = parseFloat(currentWithdraw);
+
+            const totalWithdrawNumber = withdrawBalanceNumber + currentWithdrawNumber;
+
+            document.getElementById("current-withdraw").innerText = totalWithdrawNumber;
+
+
+            const currentBalance = document.getElementById("current-balance").innerText;
+            const currentBalanceNumber = parseFloat(currentBalance);
+            const totalCurrentNumber = currentBalanceNumber - withdrawBalanceNumber;
+            document.getElementById("current-balance").innerText = totalCurrentNumber;
+
+            document.getElementById("withdraw-input").value = " ";
+
+
+        })
     </script>
 
 
